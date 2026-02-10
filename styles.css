@@ -50,6 +50,67 @@ body.no-scroll {
   overflow: hidden;
 }
 
+/* ========================================
+   Background Blobs
+   ======================================== */
+.bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-blobs__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  will-change: transform;
+}
+
+.bg-blobs__blob--1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.3) 0%, transparent 70%);
+  top: -10%;
+  right: -8%;
+  animation: blob-drift-1 20s ease-in-out infinite alternate;
+}
+
+.bg-blobs__blob--2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+  top: 40%;
+  left: -10%;
+  animation: blob-drift-2 24s ease-in-out infinite alternate;
+}
+
+.bg-blobs__blob--3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(59, 200, 190, 0.2) 0%, transparent 70%);
+  bottom: -5%;
+  right: 15%;
+  animation: blob-drift-3 22s ease-in-out infinite alternate;
+}
+
+@keyframes blob-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-60px, 40px) scale(1.1); }
+}
+
+@keyframes blob-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, -30px) scale(1.05); }
+}
+
+@keyframes blob-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-40px, -50px) scale(1.15); }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -608,6 +669,15 @@ a:hover {
     min-height: calc(100vh - var(--nav-height));
     min-height: calc(100dvh - var(--nav-height));
   }
+
+  .bg-blobs__blob {
+    filter: blur(60px);
+    opacity: 0.3;
+  }
+
+  .bg-blobs__blob--1 { width: 350px; height: 350px; }
+  .bg-blobs__blob--2 { width: 300px; height: 300px; }
+  .bg-blobs__blob--3 { width: 280px; height: 280px; }
 }
 
 /* ========================================
