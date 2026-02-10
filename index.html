@@ -2,41 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kevin Nguyen</title>
   <meta name="description" content="Personal brand, portfolio, and contact hub." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Kevin Nguyen</h1>
-      <p class="tagline">
-        Product • Strategy • Technology
-      </p>
-      <p class="bio">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container">
+      <a href="#" class="nav__logo">Kevin Nguyen</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+      <ul id="nav-menu" class="nav__menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero container" id="hero">
+      <p class="hero__greeting">Hi, I'm</p>
+      <h1 class="hero__name">Kevin Nguyen</h1>
+      <p class="hero__tagline">Product &middot; Strategy &middot; Technology</p>
+      <p class="hero__bio">
         I build thoughtful products and systems at the intersection of business,
         technology, and design. This site is my digital front door.
       </p>
-
-      <div class="cta">
-        <a href="mailto:kevin.nguyen@whichkevinnguyen.com" class="button primary">Contact Me</a>
-        <a href="#links" class="button secondary">Explore</a>
+      <div class="hero__actions">
+        <a href="mailto:kevin.nguyen@whichkevinnguyen.com" class="btn btn--primary">Get in Touch</a>
+        <a href="#projects" class="btn btn--secondary">View Work</a>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
       </div>
     </section>
 
-    <section id="links" class="links">
-      <a href="https://www.linkedin.com/in/itskevinnguyen" target="_blank">LinkedIn</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter / X</a>
-      <a href="mailto:kevin.nguyen@whichkevinnguyen.com">Email</a>
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">About</h2>
+        </div>
+        <div class="about__content">
+          <div class="about__text reveal">
+            <p>
+              I'm a product-minded strategist who thrives at the intersection of
+              business and technology. I enjoy turning ambiguous problems into clear,
+              actionable plans and shipping solutions that make a real impact.
+            </p>
+            <p>
+              Whether it's defining product roadmaps, collaborating with engineering
+              teams, or diving into data to uncover insights, I bring a bias toward
+              action and a focus on outcomes.
+            </p>
+          </div>
+          <div class="about__sidebar reveal">
+            <div class="about__details">
+              <div class="about__detail">
+                <span class="about__label">Location</span>
+                <span class="about__value">United States</span>
+              </div>
+              <div class="about__detail">
+                <span class="about__label">Focus</span>
+                <span class="about__value">Product &amp; Strategy</span>
+              </div>
+              <div class="about__detail">
+                <span class="about__label">Email</span>
+                <a class="about__value" href="mailto:kevin.nguyen@whichkevinnguyen.com">kevin.nguyen@whichkevinnguyen.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2026 Whichkevinnguyen</p>
-    </footer>
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Experience</h2>
+        </div>
+        <div class="experience__list reveal-stagger">
+          <div class="experience__item reveal">
+            <span class="experience__date">2023 &mdash; Present</span>
+            <span class="experience__role">Senior Product Manager</span>
+            <span class="experience__company">Company Name</span>
+            <p class="experience__description">
+              Leading cross-functional teams to define and deliver product strategy
+              across core platform initiatives.
+            </p>
+          </div>
+          <div class="experience__item reveal">
+            <span class="experience__date">2021 &mdash; 2023</span>
+            <span class="experience__role">Product Manager</span>
+            <span class="experience__company">Company Name</span>
+            <p class="experience__description">
+              Owned end-to-end product lifecycle for key features, driving user
+              engagement and revenue growth.
+            </p>
+          </div>
+          <div class="experience__item reveal">
+            <span class="experience__date">2019 &mdash; 2021</span>
+            <span class="experience__role">Associate Product Manager</span>
+            <span class="experience__company">Company Name</span>
+            <p class="experience__description">
+              Partnered with engineering and design teams to ship user-facing
+              features and improve product workflows.
+            </p>
+          </div>
+          <div class="experience__item reveal">
+            <span class="experience__date">2017 &mdash; 2019</span>
+            <span class="experience__role">Business Analyst</span>
+            <span class="experience__company">Company Name</span>
+            <p class="experience__description">
+              Translated business requirements into technical specifications and
+              supported data-driven decision making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Projects</h2>
+        </div>
+        <div class="projects__grid reveal-stagger">
+          <article class="project-card reveal">
+            <span class="project-card__tag">Product Strategy</span>
+            <h3 class="project-card__title">Platform Redesign</h3>
+            <p class="project-card__description">
+              Led a full-scale redesign of the core platform, improving usability
+              scores and driving increased user adoption.
+            </p>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <span class="project-card__tag">Data &amp; Analytics</span>
+            <h3 class="project-card__title">Analytics Dashboard</h3>
+            <p class="project-card__description">
+              Designed and shipped a real-time analytics dashboard that became the
+              primary tool for executive decision-making.
+            </p>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <span class="project-card__tag">Automation</span>
+            <h3 class="project-card__title">Workflow Automation</h3>
+            <p class="project-card__description">
+              Built an internal automation system that reduced manual processes by
+              60% and saved hundreds of hours quarterly.
+            </p>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <span class="project-card__tag">Growth</span>
+            <h3 class="project-card__title">Growth Experimentation</h3>
+            <p class="project-card__description">
+              Established a growth experimentation framework, running A/B tests
+              that improved key conversion metrics.
+            </p>
+            <a href="#" class="project-card__link">View Project &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Get in Touch</h2>
+        </div>
+        <p class="contact__text reveal">
+          I'm always open to new conversations, collaborations, and opportunities.
+          Feel free to reach out.
+        </p>
+        <div class="contact__email reveal">
+          <a href="mailto:kevin.nguyen@whichkevinnguyen.com" class="btn btn--primary">kevin.nguyen@whichkevinnguyen.com</a>
+        </div>
+        <div class="contact__socials reveal">
+          <a href="https://www.linkedin.com/in/itskevinnguyen" target="_blank" rel="noopener noreferrer" class="contact__social-link">LinkedIn &#8599;</a>
+          <a href="https://github.com/whichkevinnguyen" target="_blank" rel="noopener noreferrer" class="contact__social-link">GitHub &#8599;</a>
+          <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" class="contact__social-link">Twitter / X &#8599;</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Kevin Nguyen</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
